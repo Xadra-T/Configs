@@ -1,0 +1,108 @@
+{
+    //Editor
+    "editor.fontSize": 16,
+    "editor.trimAutoWhitespace": false,
+    "editor.minimap.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.largeFileOptimizations": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.occurrencesHighlight": "off",
+    "editor.formatOnSave": false,
+    
+     
+    // "editor.tokenColorCustomizations": {
+    //     "textMateRules": [
+    //         {
+    //             "scope":"string.quoted.docstring.multi.python",
+    //             "settings": {
+    //                 "foreground": "#f0f1e8"  // color of Docstring
+    //             }
+    //         }
+    //     ]
+    // },
+    
+    
+    // Workbench
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#05ef3c"
+    },
+    
+    
+    // Notebook
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+        
+    },
+    "notebook.lineNumbers": "on",
+    "notebook.output.textLineLimit": 50,
+    
+    
+    // Jupyter
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "jupyter.askForKernelRestart": false,
+    
+    
+    // Python
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "/home/xadra/Desktop/VENV/miscellaneous/bin/python",
+    
+    "[python]": {
+        "editor.formatOnType": false,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        // "editor.formatOnSave": true,
+    },
+    
+    
+    // Files
+    "files.autoSave": "afterDelay",
+    
+    
+    // Terminal
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    // "terminal.integrated.smoothScrolling": true,
+    // "terminal.integrated.fastScrollSensitivity": 100,
+    "terminal.integrated.mouseWheelScrollSensitivity": 0.2,
+    
+    
+    // Emmet
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "jinja-html": "html"
+    },
+    
+    
+    // Explorer
+    "explorer.autoReveal": false,
+    
+    // Update
+    "update.showReleaseNotes": true,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.centerLayout": false,
+    
+}
