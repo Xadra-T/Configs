@@ -1,17 +1,16 @@
 {
     //Editor
-    "editor.fontSize": 16,
-    "editor.trimAutoWhitespace": false,
-    "editor.minimap.enabled": false,
     "editor.accessibilitySupport": "off",
-    "editor.suggestSelection": "recentlyUsed",
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.largeFileOptimizations": false,
-    "editor.stickyScroll.enabled": true,
-    "editor.occurrencesHighlight": "off",
+    "editor.fontSize": 16,
     "editor.formatOnSave": false,
+    "editor.largeFileOptimizations": false,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.stickyScroll.enabled": true,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.trimAutoWhitespace": false,
     
-     
     // "editor.tokenColorCustomizations": {
     //     "textMateRules": [
     //         {
@@ -25,41 +24,42 @@
     
     
     // Workbench
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.startupEditor": "none",
-    "workbench.editor.enablePreview": false,
-    "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.tree.indent": 15,
-    "workbench.tree.renderIndentGuides": "always",
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#05ef3c"
     },
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.editor.enablePreview": false,
+    // "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,  // stack
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "always",
     
     
     // Notebook
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
-        
     },
     "notebook.lineNumbers": "on",
     "notebook.output.textLineLimit": 50,
     
     
     // Jupyter
+    "jupyter.askForKernelRestart": false,
     "jupyter.widgetScriptSources": [
         "jsdelivr.com",
         "unpkg.com"
     ],
-    "jupyter.askForKernelRestart": false,
     
     
     // Python
-    "python.languageServer": "Pylance",
     "python.defaultInterpreterPath": "/home/xadra/Desktop/VENV/miscellaneous/bin/python",
+    "python.languageServer": "Pylance",
     
     "[python]": {
         "editor.formatOnType": false,
@@ -75,6 +75,8 @@
     // Terminal
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.mouseWheelScrollSensitivity": 0.2,
     "terminal.integrated.profiles.linux": {
         "bash": {
             "path": "bash"
@@ -84,10 +86,8 @@
             "icon": "terminal-tmux"
         }
     },
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     // "terminal.integrated.smoothScrolling": true,
     // "terminal.integrated.fastScrollSensitivity": 100,
-    "terminal.integrated.mouseWheelScrollSensitivity": 0.2,
     
     
     // Emmet
@@ -100,9 +100,13 @@
     // Explorer
     "explorer.autoReveal": false,
     
+    
     // Update
     "update.showReleaseNotes": true,
-    "zenMode.hideLineNumbers": false,
+    
+    
+    // Zen Mode
     "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
     
 }
