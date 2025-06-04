@@ -19,9 +19,13 @@ return {
       ]]
       
       require('which-key').register({
+        -- {
+        --   { "<leader>c", group = "code" }, -- find-related actions like searching files or buffers
+        --   { "<leader>f", group = "find" }, -- code-related keybindings like formatting, debugging, or LSP actions
+        -- }
         {
-          { "<leader>c", group = "code" }, -- find-related actions like searching files or buffers
-          { "<leader>f", group = "find" }, -- code-related keybindings like formatting, debugging, or LSP actions
+          { "", group = "find" },
+          { "", group = "code" },
         }
       })
     end,

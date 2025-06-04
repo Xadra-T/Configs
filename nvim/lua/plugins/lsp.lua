@@ -26,10 +26,10 @@ return {
         }
       })
       
-      -- Python: ruff (for linting)
-      lspconfig.ruff.setup({
-        capabilities = capabilities,
-      })
+      -- -- Python: ruff (for linting)
+      -- lspconfig.ruff.setup({
+      --   capabilities = capabilities,
+      -- })
       
       -- Lua
       lspconfig.lua_ls.setup({
@@ -46,11 +46,15 @@ return {
         capabilities = capabilities,
       })
       
+
       -- Basic completion setup
       local cmp = require('cmp')
       local luasnip = require('luasnip')
       
       cmp.setup({
+        completion = {
+          autocomplete = { trigger_length = 1 } -- At least one character is needed to show completion
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -61,7 +65,7 @@ return {
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-e>'] = cmp.mapping.abort(), -- Abort or cancel the current completion session, closing the completion menu if it's open.
           ['<C-Space>'] = cmp.mapping.complete(), -- Trigger with 'Ctrl+Space'
-          ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm with 'Enter'
+          ['<C-CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm with 'Ctrl Enter'
           ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()

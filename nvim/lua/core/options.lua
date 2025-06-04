@@ -27,10 +27,12 @@ vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to
 -- h: Move left at start/end of line, l: Move right at start/end of line
 
 vim.o.writebackup = false -- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited (default: true)
+
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- Disables automatic comment continuation when writing code, so when you're editing comments and press Enter or create new lines with 'o', Neovim won't automatically start the new line with a comment character. (default: 'croql')
 vim.opt.iskeyword:append '-' -- Hyphenated words recognized by searches (default: does not include '-')
 vim.opt.guifont = "Hack Nerd Font NF:h12"
--- vim.opt.guifont = "Consolas:h12"
+vim.opt.list = true
+vim.opt.listchars:append("trail:·")
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
 vim.opt.shortmess:append 'c' -- Don't give |ins-completion-menu| messages, skip displaying messages like "match 1 of 2" during completion, avoid showing "scanning tags" or other completion-related scanning messages (default: does not include 'c') c: completion
 vim.opt.termguicolors = true -- Set termguicolors to enable highlight groups (default: false). Allow Neovim to use 24-bit RGB colors in the terminal instead of the more limited 256-color palette.
@@ -49,3 +51,4 @@ vim.o.relativenumber = false -- (default: false)
 vim.o.showmode = true -- false: won't show things like -- INSERT -- anymore (default: true)  TODO change this to false when using a status line
 vim.o.wrap = true -- Wrap long lines (default: true)
 vim.wo.signcolumn = 'auto' -- sign column: the vertical column at the left edge of the window. auto: Show the sign column only when there are signs to display (default: 'auto') yes: Always show the sign column (takes up space even if empty), number: Merge the sign column with the number column
+

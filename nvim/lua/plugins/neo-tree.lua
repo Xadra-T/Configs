@@ -13,6 +13,7 @@ return {
         close_if_last_window = true,
         window = {
           width = 30, -- 30-pixel width for the sidebar
+          position = "right",
         },
         filesystem = {
           follow_current_file = true, -- Following the current file when navigating

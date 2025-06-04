@@ -10,7 +10,7 @@ return {
   config = function()
     require('mason').setup()
     require('mason-lspconfig').setup({
-      ensure_installed = { 'lua_ls', 'pylyzer', 'ruff', 'rust_analyzer', }, -- Install these LSP servers
+      ensure_installed = { 'lua_ls', 'pylyzer', 'rust_analyzer', }, -- Install these LSP servers
       automatic_installation = true, -- Auto-install when lspconfig setups are called
     })
   end,
