@@ -13,8 +13,14 @@ return {
     config = function()
       local lspconfig = require('lspconfig')
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      
+
       -- Python: pylyzer (for IDE features)
+      local lspconfig = require('lspconfig')
+      local project_root = vim.fn.getcwd() -- Gets the current working directory of Neovim
+      -- Define the potential path to the virtual environment's Python executable
+      local venv_dir = project_root .. "/.venv"
+      local venv_python_path = venv_dir .. "/bin/python"
+
       lspconfig.pylyzer.setup({
         settings = {
           python = {
@@ -22,15 +28,16 @@ return {
             diagnostics = true,
             inlayHints = true,
             smartCompletion = true,
+            analysis = {pythonPath = vim.fn.isdirectory(venv_dir) and venv_python_path or nil,},
           }
         }
       })
-      
+
       -- -- Python: ruff (for linting)
       -- lspconfig.ruff.setup({
       --   capabilities = capabilities,
       -- })
-      
+
       -- Lua
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
@@ -40,17 +47,17 @@ return {
           }
         }
       })
-      
+
       -- Rust
       lspconfig.rust_analyzer.setup({
         capabilities = capabilities,
       })
-      
+
 
       -- Basic completion setup
       local cmp = require('cmp')
       local luasnip = require('luasnip')
-      
+
       cmp.setup({
         completion = {
           autocomplete = { trigger_length = 1 } -- At least one character is needed to show completion
